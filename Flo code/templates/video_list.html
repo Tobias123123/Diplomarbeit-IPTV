@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IP-TV</title>
+</head>
+<body>
+    <h1>Willkommen bei IP-TV</h1>
+    <ul>
+        {% for video in video_files %}
+            <li><a href="{{ url_for('video', video_name=video) }}">{{ video }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

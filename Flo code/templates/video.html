@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ video_name }}</title>
+</head>
+<body>
+    <h1>{{ video_name }}</h1>
+    <video controls width="600">
+        <source src="{{ url_for('static', filename=video_name) }}" type="video/mp4">
+        Ihr Browser unterstützt das Video-Tag nicht.
+    </video>
+    <a href="/">Zurück zur Startseite</a>
+</body>
+</html>

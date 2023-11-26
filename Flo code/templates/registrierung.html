@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registrierung</title>
+</head>
+<body>
+    <h1>Registrierung</h1>
+    <form action="/register" method="post">
+        {{ form.hidden_tag() }}
+        <p>{{ form.username.label }}: {{ form.username() }}</p>
+        <p>{{ form.password.label }}: {{ form.password() }}</p>
+        <p>{{ form.password_confirm.label }}: {{ form.password_confirm() }}</p>
+        {% if error_message %}
+            <p style="color: red;">{{ error_message }}</p>
+        {% endif %}
+        <p>{{ form.submit() }}</p>
+    </form>
+</body>
+</html>
