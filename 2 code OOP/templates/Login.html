@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet"  href="static/design/Login.css">
+    <title>Anmelden</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Anmelden</h2>
+        <form action="Login" method="post">
+            {{ form.hidden_tag() }}
+            <div>{{ form.username() }}</div>
+            <div >{{ form.password() }}</div>
+            <div class="error_message">{{ error_message }}</div>
+    
+            <div>{{ form.submit() }}</div>
+        </form>
+        <div class="register-link">
+            Noch kein Konto? <a href="Registrierung">Registrieren</a>
+        </div>
+    </div>
+</body>
+</html>
+
+

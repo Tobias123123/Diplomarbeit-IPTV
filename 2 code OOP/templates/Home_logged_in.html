@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<!--Header bereich wo die Metadaten stehen-->
+<head>
+    <meta charset="UTF-8">
+    <title>Webseite Name</title>
+    <link rel="stylesheet" href="static/design/home.css">
+    <script src="https://kit.fontawesome.com/263e2b80fc.js" crossorigin="anonymous"></script>
+
+</head>
+
+
+<!--Der Berich wo die Videos sind wenn man welche hinzufügt-->
+<body>
+    <div class="videos">
+        <section class="video-section">
+            {% for video,image in data.items() %}
+            <article class="video-container">
+                <a href="{{url_for('video_player', video_name = video )}}" class="thumbnail">
+                    <img class="thumbnail-img" src="{{ image }}" />
+                    <span class="video-title">{{video.split('.')[0]}}</span>
+                </a>
+            </article>
+            {% endfor %}
+        </section>
+    </div>
+
+<!--Home Button zum Seite neu laden-->
+    <div class="Home">
+        <a href="Reload">
+            <img  src="static/images/Home.png" class = rundes_bild style="width:50px; height:50px;" />
+        </a>
+    </div>
+
+<!--Button um sich wieder abzumelden-->
+    <div class="Login">
+        <a href="Abmelden">
+            <span class="Loginstyle">Abmelden</span>
+        </a>
+    </div>
+
+<!--Suchleiste um Videos zu suchen-->
+    <div class="suchleiste">
+        <form action="search" method="get">
+            <input class="suchtext" type="text" name="query" placeholder="Suche..." value="{{query_value}}">
+            <button type="submit" class="suchknopf">
+                <i class="fa-solid fa-magnifying-glass"></i> 
+            </button>
+        </form>
+    </div>
+</body>
+</html>

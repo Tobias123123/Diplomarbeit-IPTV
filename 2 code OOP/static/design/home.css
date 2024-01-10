@@ -1,0 +1,109 @@
+
+body {
+	background-color: #0074d9;
+}
+.video-container {
+    display: inline-block;
+    margin: 10px; /* Abstand zwischen den Thumbnails */
+    position: relative;
+    top: 70px;
+    left: 10px;
+    right: 10px;
+}
+
+.video-title {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: inline-block;
+    max-width: 100%; /* Maximale Breite des Titels auf 100% setzen */
+    overflow: hidden; /* Überlauf verstecken */
+    white-space: nowrap; /* Verhindern, dass der Text umbrochen wird */
+    text-overflow: ellipsis; /* Text durch drei Punkte anzeigen, wenn er abgeschnitten wird */
+}
+
+
+
+/* Zusätzlicher Stil für die Thumbnails */
+.thumbnail {
+    display: block;
+    overflow: hidden;
+}
+
+.thumbnail-img {
+    width: 290px; /* Breite des Thumbnails */
+    height: 200px; /* Höhe des Thumbnails */
+    object-fit: cover; /* Um das Bild innerhalb des Rahmens anzupassen */
+}
+
+.Home{
+    position: absolute;
+    top: 17px;
+    left: 25px;
+       
+}
+
+.rundes_bild{
+
+    border-radius: 50%;    
+}
+
+
+.suchleiste{
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #2f3640;
+    height: 30px;
+    border-radius: 40px;
+    padding: 10px;
+}
+
+.suchknopf{
+    color: #078bff;
+    float: right;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #2f3640;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.suchtext{
+    border: none;
+    background: none;
+    outline: none;
+    float: left;
+    padding: 0;
+    color: white;
+    font-size: 16px;
+    transition: 0.4s;
+    line-height: 30px;
+    width: 240px;
+
+}
+
+.Login{
+    position: absolute;
+    top: 17px;
+    left: 95%;
+}
+
+.Loginstyle {
+    color: #ffffff;
+    font-family: "Arial";
+    text-decoration: none;
+
+}
+

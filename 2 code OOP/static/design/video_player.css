@@ -1,0 +1,62 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: none;
+}
+
+.main-wrapper {
+    display: grid;
+    margin: 0;
+    grid-template-columns: 1fr;
+    margin: 0;
+}
+
+main {
+    margin: 0;
+    display: grid;
+    grid-gap: 0;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "video";
+}
+
+section {
+    display: none;
+}
+
+aside {
+    display: none;
+}
+
+.main__video {
+    grid-area: video;
+    border: none;
+    padding: 0;
+    position: relative;
+    width: 100%;
+    padding-bottom: 49.2%; /* Anpassen Sie diesen Wert, um die Größe des Videos zu ändern */
+    height: 0;
+    overflow: hidden;
+}
+
+
+
+.main__video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.main__video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
